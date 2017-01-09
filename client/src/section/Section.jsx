@@ -10,7 +10,7 @@ class Section extends React.Component {
       <div className="section white">
         <div className="row container">
           <h2 className="header">This section holds a grid</h2>
-          {this.props.children}
+           {this.props.children}
         </div>
       </div>
     )
