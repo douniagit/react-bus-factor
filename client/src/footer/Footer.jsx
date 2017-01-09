@@ -1,6 +1,7 @@
 /**
 * @desc Ce component permet d'intégrer facilement le module sidenav de materialize
 */
+import './footer.scss';
 
 class Footer extends React.Component {
 
