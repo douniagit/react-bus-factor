@@ -34,6 +34,20 @@ module.exports = {
        }
      }),
 
+    new webpack.DefinePlugin({
+      'process.env':{
+        'NODE_ENV': JSON.stringify('production')
+      }
+
+    }),
+
+    new webpack.optimize.UglifyJsPlugin({
+      compress:{
+        warnings: true
+      }
+    }),
+
+
     new webpack.ProvidePlugin({ // Permet de définir les plugin qu'on veut rendre accessible à tout le scope de notre app.
       'window.$': 'jquery',
       'window.jQuery': 'jquery',
