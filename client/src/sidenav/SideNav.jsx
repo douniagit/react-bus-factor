@@ -1,13 +1,14 @@
 /**
 * @desc Ce component permet d'intégrer facilement le module sidenav de materialize
 */
+import './sidenav.scss';
 
 class SideNav extends React.Component {
 
   // S'execute quand le HTML du component est entièrement chargé dans la page
   componentDidMount() {
     // Materialize initie la sidenav
-    $('.button-collapse').sideNav();
+    $('.btn-floating').sideNav();
   }
 
   // Le HTML qui sera incorporé à chaque fois que <SideNav /> est appelé
@@ -29,7 +30,10 @@ class SideNav extends React.Component {
           <li><a className="subheader">Subheader</a></li>
           <li><a className="waves-effect" href="#!">Third Link With Waves</a></li>
         </ul>
-        <a href="#" data-activates="slide-out" className="button-collapse"><i className="material-icons">menu</i></a>
+          <div id="flex">
+          <a href="#" data-activates="slide-out" className="btn-floating btn-large waves-effect waves-light red"><i className="material-icons">menu</i></a>
+          </div>
+        {/*<a href="#" data-activates="slide-out" className="button-collapse"><i className="material-icons">menu</i></a>*/}
       </div>
     )
   }
